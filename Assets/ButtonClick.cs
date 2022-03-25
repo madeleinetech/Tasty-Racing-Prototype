@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ButtonClick : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 {
+    public TimerWL myTimer;
     private Canvas myCanvas;
 
     [SerializeField] private Image _img;
@@ -38,6 +39,7 @@ public class ButtonClick : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 
     public void ButtonWasClicked()
     {
+        myTimer.isTimerEnd = true;
         myCanvas.enabled = false;
         Debug.Log("Clicked!");
     }

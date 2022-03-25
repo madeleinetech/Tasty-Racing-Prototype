@@ -12,7 +12,7 @@ public class TimerWL : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isTimerEnd = true;
+        //isTimerEnd = true;
     }
 
     // Update is called once per frame
