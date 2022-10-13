@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ButtonClick : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 {
-    public TimerWL myTimer;
     private Canvas myCanvas;
 
     [SerializeField] private Image _img;
@@ -39,7 +39,8 @@ public class ButtonClick : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 
     public void ButtonWasClicked()
     {
-        myTimer.isTimerEnd = true;
+        SceneManager.LoadScene("FirstCutScene");
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName("FirstCutScene"));
         myCanvas.enabled = false;
         Debug.Log("Clicked!");
     }
