@@ -1,27 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class TypeWriter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    Text txt;
-    string story;
-    void Awake()
-    {
-        txt = GetComponent<Text>();
-        story = txt.text;
-        txt.text = "";
-        StartCoroutine("PlayText");
-    }
+    private TextMeshPro _textMeshPro;
 
-    IEnumerator PlayText()
+    IEnumerator DisplayLine()
     {
-        foreach (char c in story)
+        _textMeshPro = gameObject.GetComponent<TextMeshPro>() ?? gameObject.AddComponent<TextMeshPro>();
+
+        int totalVisibleChar = _textMeshPro.textInfo.characterCount;
+        int counter = 0;
+
+        while (true)
         {
-            txt.text+= c;
-            yield return new WaitForSeconds (0.125f);
+            int visibleCount = counter % (totalVisibleChar + 1);
+            _textMeshPro.maxVisibleCharacters = visibleCount;
+
+            if (visibleCount >= totalVisibleChar)
+            {
+                yield return new WaitForSeconds(1.0f);
+            }
+
+            counter += 1;
+
+            yield return new WaitForSeconds(0.5f);
         }
     }
    
