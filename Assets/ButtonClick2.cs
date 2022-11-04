@@ -23,7 +23,7 @@ public class ButtonClick2 : MonoBehaviour
     void SetActiveScene()
     {
         SceneManager.LoadScene("candymap", LoadSceneMode.Additive);
-        StartCoroutine(loadScene("candymap"));
+        //StartCoroutine(LoadScene("candymap"));
         // Set Scene2 as the active Scene
         
         // Ouput the name of the active Scene
