@@ -8,6 +8,6 @@ public class SceneHelper : MonoBehaviour
     {
         SceneManager.LoadScene("candymap");
         Debug.Log("Loaded Scene");
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("candymap"));
+        //SceneManager.SetActiveScene(SceneManager.GetSceneByName("candymap"));
     }
 }

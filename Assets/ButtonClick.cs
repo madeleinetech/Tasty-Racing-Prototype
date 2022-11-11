@@ -40,8 +40,8 @@ public class ButtonClick : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public void ButtonWasClicked()
     {
         SceneManager.LoadScene("FirstCutScene");
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("FirstCutScene"));
-        myCanvas.enabled = false;
+        //SceneManager.SetActiveScene(SceneManager.GetSceneByName("FirstCutScene"));
+        //myCanvas.enabled = false;
         Debug.Log("Clicked!");
     }
 }
