@@ -6,6 +6,7 @@ public class WASDmove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //add force (fixed update)
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector3.forward * speed);

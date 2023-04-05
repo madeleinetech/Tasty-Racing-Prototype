@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class TimerWL : MonoBehaviour
 {
@@ -30,6 +32,8 @@ public class TimerWL : MonoBehaviour
                 Debug.Log("Game Over");
                 timer = 0;
                 isTimerEnd = false;
+                SceneManager.LoadScene("GameOver");
+
             }
         }
     }
