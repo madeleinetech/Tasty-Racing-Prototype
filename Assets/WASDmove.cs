@@ -19,12 +19,12 @@ public class WASDmove : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(Vector3.up, -2);
+            transform.Rotate(Vector3.up, -1);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(Vector3.up, 2);
+            transform.Rotate(Vector3.up, 1);
         }
     }
 }
