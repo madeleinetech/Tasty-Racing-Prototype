@@ -16,7 +16,7 @@ public class PlayerCollectUI : MonoBehaviour
     public void UpdateCandyText(PlayerCollect playerCollect)
     {
         candyText.text = playerCollect.NumberOfCandy.ToString();
-        if (playerCollect.NumberOfCandy == 6)
+        if (playerCollect.NumberOfCandy == 10)
         {
             SceneManager.LoadScene("GameOver");
         }
